@@ -9,7 +9,7 @@ function App() {
         <img src={coffeeCup}/>
       </div>
       <div className='rightside'>
-        <h1>Buy Me A Coffee</h1>
+        <h1 className='title'>Buy Me A Coffee</h1>
       </div>
     </div>
   );
