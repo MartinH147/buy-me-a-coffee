@@ -1,4 +1,4 @@
-// https://www.youtube.com/watch?v=e-whXipfRvg @8:36
+// https://www.youtube.com/watch?v=e-whXipfRvg @11:51
 
 import { useEffect, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js"
