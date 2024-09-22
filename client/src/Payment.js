@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js"
 import CheckoutForm from './CheckoutForm';
 import { Elements } from "@stripe/react-stripe-js"
+import Spline from '@splinetool/react-spline';
 
 function Payment(props) {
   const [stripePromise, setStripePromise] = useState(null);
@@ -30,7 +31,8 @@ function Payment(props) {
 
   return (
    <>
-    <h1>React Stripe and the Payment ELement</h1>
+    <Spline scene="https://prod.spline.design/oAud9-tKqGkuyJP6/scene.splinecode" />
+    <h1>Buy Me a Coffee</h1>
     {stripePromise && clientSecret && (
       <Elements stripe={stripePromise} options={{clientSecret}}>
         <CheckoutForm />

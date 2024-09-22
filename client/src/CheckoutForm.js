@@ -18,15 +18,20 @@ export default function CheckoutForm() {
 
     setIsProcessing(true);
 
-    const {error} = await stripe.confirmPayment({
+    const {error, paymentIntent } = await stripe.confirmPayment({
       elements,
       confirmParams: {
         return_url: `${window.location.origin}/completion`
       },
+      redirect: "if_required",
     })
 
     if (error) {
       setMessage(error.message);
+    } else if (paymentIntent && paymentIntent.status === 'succeeded') {
+      setMessage("Payment status: " + paymentIntent.status);
+    } else {
+      setMessage("Unexpected state")
     }
 
     setIsProcessing(false);
