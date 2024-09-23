@@ -18,7 +18,7 @@ export default function CheckoutForm() {
 
     setIsProcessing(true);
 
-    const {error, paymentIntent } = await stripe.confirmPayment({
+    const { error, paymentIntent } = await stripe.confirmPayment({
       elements,
       confirmParams: {
         return_url: `${window.location.origin}/completion`

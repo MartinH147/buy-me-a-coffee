@@ -98,3 +98,11 @@ select {
   border-radius: var(--radius);
   font-size: 0.7em;
 }
+
+/* above: STRIPE styling */
+
+/* below: MY styling */
+
+body {
+  overflow: hidden;
+}

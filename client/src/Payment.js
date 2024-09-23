@@ -5,6 +5,7 @@ import { loadStripe } from "@stripe/stripe-js"
 import CheckoutForm from './CheckoutForm';
 import { Elements } from "@stripe/react-stripe-js"
 import Spline from '@splinetool/react-spline';
+import './App.css'
 
 function Payment(props) {
   const [stripePromise, setStripePromise] = useState(null);
@@ -30,15 +31,19 @@ function Payment(props) {
   }, [])
 
   return (
-   <>
-    <Spline scene="https://prod.spline.design/oAud9-tKqGkuyJP6/scene.splinecode" />
-    <h1>Buy Me a Coffee</h1>
-    {stripePromise && clientSecret && (
-      <Elements stripe={stripePromise} options={{clientSecret}}>
-        <CheckoutForm />
-      </Elements>
-    )}
-   </>
+   <div className="App">
+    <div className="coffeeCupContainer">
+      <Spline scene="https://prod.spline.design/oAud9-tKqGkuyJP6/scene.splinecode"/>
+    </div>
+    <div className="paymentContainer">
+      <h1>Buy Me a Coffee</h1>
+      {stripePromise && clientSecret && (
+        <Elements stripe={stripePromise} options={{clientSecret}}>
+          <CheckoutForm />
+        </Elements>
+      )}
+    </div>
+   </div>
   );
 }
 
