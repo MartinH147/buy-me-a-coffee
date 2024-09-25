@@ -101,6 +101,15 @@ fieldset, input, select {
 
 /* below: MY styling */
 
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  padding: 0px;
+}
+
 .App {
   height: 100vh;
   width: 100vw;
@@ -108,10 +117,19 @@ fieldset, input, select {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: red;
-  margin: 0;
+  background-color: clear;
+  margin: 0px;
+  padding: 0px;
 }
 
 .coffeeCupContainer {
   width: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coffeeCup {
+  width: 300px;
+  height: 600px;
 }

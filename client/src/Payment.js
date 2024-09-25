@@ -33,7 +33,7 @@ function Payment(props) {
   return (
    <div className="App">
     <div className="coffeeCupContainer">
-      <Spline scene="https://prod.spline.design/oAud9-tKqGkuyJP6/scene.splinecode"/>
+      <Spline scene="https://prod.spline.design/oAud9-tKqGkuyJP6/scene.splinecode" className="coffeeCup"/>
     </div>
     <div className="paymentContainer">
       <h1>Buy Me a Coffee</h1>
