@@ -117,19 +117,27 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: clear;
+  background-color: #F2F4F3;
   margin: 0px;
   padding: 0px;
 }
 
 .coffeeCupContainer {
-  width: 50vh;
+  width: 48vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 1vw;
 }
 
 .coffeeCup {
-  width: 300px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
+}
+
+.paymentContainer {
+  width: 48vw;
+  height: 100vh;
+  margin: 1vw;
 }
