@@ -38,7 +38,7 @@ function Payment(props) {
     <div className="paymentContainer">
       <h1>Buy Me a Coffee</h1>
       {stripePromise && clientSecret && (
-        <Elements stripe={stripePromise} options={{clientSecret}}>
+        <Elements stripe={stripePromise} options={{clientSecret}} className="paymentBox">
           <CheckoutForm />
         </Elements>
       )}
