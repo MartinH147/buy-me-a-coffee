@@ -39,15 +39,15 @@ function Payment(props) {
       <p>Thanks for stopping by! I appreciate your support (so do my taste buds).</p>
       <div className="paymentOption">
         <h2>Shout me a coffee</h2>
-        <button>$5</button>
+        <button className="paymentAmount">$5</button>
       </div>
       <div className="paymentOption">
-        <h2>Or a kebab</h2>
-        <button>$15</button>
+        <h2>Or a Zinger box</h2>
+        <button className="paymentAmount">$15</button>
       </div>
       <div className="paymentOption">
-        <h2>Or a multi-course Michelin-starred meal</h2>
-        <button>$400</button>
+        <h2>Or dinner at a nice Italian place</h2>
+        <button className="paymentAmount">$100</button>
       </div>
 
       {stripePromise && clientSecret && (
