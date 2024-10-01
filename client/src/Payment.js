@@ -1,4 +1,4 @@
-// https://www.youtube.com/watch?v=e-whXipfRvg
+// https://www.youtube.com/watch?v=e-whXipfRvg @12:53
 
 import { useEffect, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js"
@@ -22,7 +22,9 @@ function Payment(props) {
   useEffect(() => {
     fetch("/create-payment-intent", {
       method: "POST",
-      body: JSON.stringify({})
+      body: JSON.stringify({
+        amount: 1000,
+      })
     }).then(async (r) => {
       const { clientSecret } = await r.json();
 

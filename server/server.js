@@ -1,3 +1,5 @@
+// https://www.youtube.com/watch?v=Mbl-2bcr7kU for having a dynamic payment amount
+
 const express = require("express");
 const app = express();
 const { resolve } = require("path");
@@ -22,10 +24,12 @@ app.get("/config", (req, res) => {
 });
 
 app.post("/create-payment-intent", async (req, res) => {
+  const model = req.body;
+
   try{
     const paymentIntent = await stripe.paymentIntents.create({
-      currency: 'eur',
-      amount: 1999,
+      currency: 'aud',
+      amount: model.amount,
       automatic_payment_methods: {
         enabled: true,
       },
