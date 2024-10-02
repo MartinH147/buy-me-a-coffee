@@ -24,12 +24,11 @@ app.get("/config", (req, res) => {
 });
 
 app.post("/create-payment-intent", async (req, res) => {
-  const model = req.body;
-
+  
   try{
     const paymentIntent = await stripe.paymentIntents.create({
       currency: 'aud',
-      amount: model.amount,
+      amount: 1000,
       automatic_payment_methods: {
         enabled: true,
       },
