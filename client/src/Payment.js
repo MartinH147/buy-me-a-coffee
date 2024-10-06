@@ -23,6 +23,7 @@ function Payment(props) {
     fetch("/create-payment-intent", {
       method: "POST",
       body: JSON.stringify({
+        amount: 1000,
       })
     }).then(async (r) => {
       const { clientSecret } = await r.json();
